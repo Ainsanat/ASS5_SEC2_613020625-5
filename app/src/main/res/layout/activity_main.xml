@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Employee Form"
+        android:textStyle="bold"
+        android:textSize="30sp"/>
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+        <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name: "
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_width="305dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:textSize="20sp" />
+            <RadioGroup
+                android:id="@+id/sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="20dp"/>
+            </RadioGroup>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email: "
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="305dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:inputType="textEmailAddress"/>
+
+        </TableRow>
+        <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salary: "
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/edt_salary"
+            android:layout_width="305dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:inputType="number"/>
+
+    </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:id="@+id/data"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="#336600"
+            android:onClick="showData"
+            android:text="send data"/>
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:onClick="resetData"
+            android:background="#ff0000"
+            android:text="reset"
+            android:layout_marginLeft="15dp"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
